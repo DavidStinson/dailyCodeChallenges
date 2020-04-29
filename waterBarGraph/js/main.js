@@ -1,3 +1,61 @@
+logArray([1,2,3,4,5])
+
+function logArray(arr){
+  for(let i=0; i<arr.length; i++){
+    console.log(arr[i])
+    for(let j=0; j<arr.length; j++){
+      console.log('i: ', arr[i], 'j: ', arr[j])
+    }
+  }
+}
+
+
+
+
+
+
+let n = 16777216
+
+log(n)
+
+function log(n) {
+  let j = 0
+  for (let i = n; i > .999; i /= 2) {
+    let result = i;
+    console.log(`The result of iteration ${j} is ${result}`)
+    j++
+  }
+}
+
+
+
+
+
+
+// Creates this array: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+tinyArray = Array.from(Array(10).keys())
+// Creates a very large array starting with: [0, 1, 2, 3 ...]
+largeArray = Array.from(Array(100000000).keys())
+
+findRandomNumberInArray(tinyArray)
+findRandomNumberInArray(largeArray)
+
+function findRandomNumberInArray(arr) {
+  randomNum = Math.floor(Math.random() * arr.length)
+  for (let i = 0; i < arr.length; i++) {
+    if (randomNum === arr[i]) return arr[i]
+  }
+}
+
+
+
+
+
+
+
+
+
+
 /*------------------------- Variables and Constants -------------------------*/
 
 /*------------------------ Classes and Objects ------------------------------*/
