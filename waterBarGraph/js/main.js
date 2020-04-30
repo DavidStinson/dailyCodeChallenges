@@ -1,3 +1,30 @@
+logTwoArrays(["A", "B", "C", "D"], [1, 2, 3, 4])
+
+function logTwoArrays(arrA, arrB){
+  for(let i=0; i<arrA.length; i++){
+    console.log(arrA[i])
+  }
+  for(let j=0; j<arrB.length; j++){
+    console.log(arrB[j])
+  }
+}
+
+
+
+
+
+
+
+let min = Number.POSITIVE_INFINITY
+let max = Number.NEGATIVE_INFINITY
+let arr = [10, 4, 2, 7, 9]
+
+arr.forEach(num => {
+  if (num < min) min = num
+  if (num > max) max = num
+})
+
+
 logArray([1,2,3,4,5])
 
 function logArray(arr){
@@ -6,6 +33,9 @@ function logArray(arr){
     for(let j=0; j<arr.length; j++){
       console.log('i: ', arr[i], 'j: ', arr[j])
     }
+  }
+  for(let i=0; i<arr.length; i++){
+    console.log(arr[i])
   }
 }
 
