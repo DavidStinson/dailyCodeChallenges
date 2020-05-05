@@ -1,22 +1,28 @@
-/*------------------------- Variables and Constants -------------------------*/
+// This function returns an array of all possible outcomes from flipping a coin N times.
+// Input type: Integer
+// For example, coinFlips(2) would return the following:
+// ["HH", "HT", "TH", "TT"]
+// H stands for Heads and T stands for tails
+// Represent the two outcomes of each flip as "H" or "T"
 
-/*------------------------ Classes and Objects ------------------------------*/
+//This was written by Alan and is more efficient than the one I wrote
 
-/*---------------------------------- Cache ----------------------------------*/
 
-/*----------------------------- Event Listeners -----------------------------*/
 
-/*-------------------------------- Functions --------------------------------*/
+
+
+
+// This is mine!
 
 function coinFlipper(n) {
   let numberOfVariations = Math.pow(2, n)
   let variations = Array(numberOfVariations).fill("")
 
   function flipCoin(flips) {
-    flipper = 1
     if (flips === 0) {
       return variations
     }
+    let flipper = 1
     let numberOfConsecutiveHeadsOrTails = Math.pow(2, flips) / 2
     let i = 0
     while (i < numberOfVariations) {
@@ -32,10 +38,10 @@ function coinFlipper(n) {
   return flipCoin(n)
 }
 
-runA = coinFlipper(2)
-runB = coinFlipper(3)
-runC = coinFlipper(4)
-runD = coinFlipper(20)
+runA = coinFlips(2)
+runB = coinFlips(3)
+runC = coinFlips(4)
+runD = coinFlips(20)
 
 console.log(runA)
 console.log(runB)

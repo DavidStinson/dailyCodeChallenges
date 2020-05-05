@@ -1,90 +1,103 @@
-logTwoArrays(["A", "B", "C", "D"], [1, 2, 3, 4])
-
-function logTwoArrays(arrA, arrB){
-  for(let i=0; i<arrA.length; i++){
-    console.log(arrA[i])
-  }
-  for(let j=0; j<arrB.length; j++){
-    console.log(arrB[j])
-  }
-}
-
-
-
-
-
-
-
-let min = Number.POSITIVE_INFINITY
-let max = Number.NEGATIVE_INFINITY
-let arr = [10, 4, 2, 7, 9]
-
-arr.forEach(num => {
-  if (num < min) min = num
-  if (num > max) max = num
-})
-
-
-logArray([1,2,3,4,5])
-
-function logArray(arr){
-  for(let i=0; i<arr.length; i++){
-    console.log(arr[i])
-    for(let j=0; j<arr.length; j++){
-      console.log('i: ', arr[i], 'j: ', arr[j])
+function logPairs(arrA, arrB) {
+  for (let i = 0; i < arrA.length; i++) {
+    for (let j = 0; j < arrB.length; j++) {
+      for (let k = 0; k < 100000; k++) {
+        console.log("i: ", arrA[i], "j: ", arrB[j])
+      }
     }
   }
-  for(let i=0; i<arr.length; i++){
-    console.log(arr[i])
+}
+
+function sumAndProductOfArray(arr) {
+  let sum = 0
+  let product = 1
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i]
   }
+  arr.forEach(element => {
+    product *= element
+  })
+  console.log(`Sum: ${sum}`)
+  console.log(`Product: ${product}`)
 }
 
 
 
 
+function fibonacci(n) {
+  return n <= 1 ? 0
+       : n <= 2 ? 1
+       : fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+console.log(fibonacci(25));
 
 
-let n = 16777216
 
-log(n)
 
+logTwoArrays(["A", "B", "C", "D"], [1, 2, 3, 4]);
+
+function logTwoArrays(arrA, arrB) {
+  for (let i = 0; i < arrA.length; i++) {
+    console.log(arrA[i]);
+    for (let j = 0; j < arrA.length; j++) {
+      console.log(arrA[j]);
+    }
+  }
+  for (let j = 0; j < arrA.length; j++) {
+    console.log(arrA[j]);
+  }
+}
+
+let min = Number.POSITIVE_INFINITY;
+let max = Number.NEGATIVE_INFINITY;
+let arr = [10, 4, 2, 7, 9];
+
+arr.forEach((num) => {
+  if (num < min) min = num;
+  if (num > max) max = num;
+});
+
+logArray([1, 2, 3, 4, 5]);
+
+function logArray(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+    for (let j = 0; j < arr.length; j++) {
+      console.log("i: ", arr[i], "j: ", arr[j]);
+    }
+  }
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+  }
+}
+
+log(8);
 function log(n) {
-  let j = 0
-  for (let i = n; i > .999; i /= 2) {
-    let result = i;
-    console.log(`The result of iteration ${j} is ${result}`)
-    j++
+  let j = 1;
+  for (let k = 0; k < n; k++) {
+    for (let i = n; i > 0.999; i /= 2) {
+      let result = i;
+      console.log(`The result of iteration ${j} is ${result}`);
+      j++;
+    }
   }
 }
-
-
-
-
-
 
 // Creates this array: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-tinyArray = Array.from(Array(10).keys())
+tinyArray = Array.from(Array(10).keys());
 // Creates a very large array starting with: [0, 1, 2, 3 ...]
-largeArray = Array.from(Array(100000000).keys())
+largeArray = Array.from(Array(100000000).keys());
 
-findRandomNumberInArray(tinyArray)
-findRandomNumberInArray(largeArray)
+findRandomNumberInArray(tinyArray);
+findRandomNumberInArray(largeArray);
 
 function findRandomNumberInArray(arr) {
-  randomNum = Math.floor(Math.random() * arr.length)
+  randomNum = Math.floor(Math.random() * arr.length);
   for (let i = 0; i < arr.length; i++) {
-    if (randomNum === arr[i]) return arr[i]
+    if (randomNum === arr[i]) return arr[i];
   }
 }
-
-
-
-
-
-
-
-
-
 
 /*------------------------- Variables and Constants -------------------------*/
 
