@@ -16,6 +16,8 @@
 
 /*-------------------------------- Functions --------------------------------*/
 
+// From Alanna/Crystal
+
 function concatenationMaxSum(arr, k) {
     let numArray = [];
     let count = 0;
